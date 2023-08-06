@@ -1,0 +1,18 @@
+.typing-animation {
+    font-size: 2rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: center;
+    border-right: 0.15em solid; /* Adjust cursor color */
+  }
+  
+  .blinking-cursor {
+    animation: blink 0.75s step-end infinite;
+  }
+  
+  @keyframes blink {
+    50% {
+      opacity: 0;
+    }
+  }
+  
