@@ -157,12 +157,15 @@ footer {
 
 .profile-image {
   width: 200px;
+  max-width: 300px; /* or any width you prefer */
+  /* padding: 10px; */
   height: 200px;
   border-radius: 50%;
   overflow: hidden;
   margin-right: 30px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
+
 
 .profile-image img {
   width: 100%;
@@ -223,23 +226,20 @@ background-color: white;
 }
 
 .education-section {
-  background-color: #f8f8f8;
-  padding: 60px 0;
-}
-
-.education-section h2 {
-  color: #333;
-  margin-bottom: 20px;
+    background-color: #f8f8f8;
+    padding: 60px 0;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .education-item {
-  margin-bottom: 30px;
-}
-.education-item p{
-
-background-color: white;
-margin:4px;
-width:60%;
+    margin-bottom: 30px;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .education-item h3 {
@@ -248,26 +248,74 @@ width:60%;
 }
 
 .education-item p {
-  color: #666;
-  font-size: 1.1rem;
-  line-height: 1.6;
-  background-color: rgba(51, 51, 51, 0.146);
+    color: #666;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    background-color: rgba(51, 51, 51, 0.146);
+    padding: 10px;
+    border-radius: 5px;
+    margin: 4px 0;
+} 
+
+#lk {
+    text-decoration: none;
+    color: white;
+    font-size: smaller;
+    font-weight: 500;
+    background-color: rgba(29, 29, 237, 0.7);
+    padding: 4px 12px;
+    border-radius: 20px;
+    transition: background-color 0.3s;
+    display: inline-block;
+    margin-left: 10px;
 }
 
-#lk{
-  text-decoration: none;
-  border: 1px dotted black;
-  border-radius: 50%;
-  padding: 4px;
-  color: white;
-  font-size: smaller;
-  background-color: rgba(29, 29, 237, 0.728);
-  background-image: url("./asset/techanimated.jpg");
-  background-position-x: -94px;
-  margin-left: 30%;
+#lk:hover {
+    background-color: rgba(29, 29, 237, 0.9);
 }
-#lk:hover{
-  background-blend-mode: luminosity;
+
+#projects .container {
+    display: block; /* Ensure projects are stacked vertically */
+    padding: 20px;
+}
+
+.project {
+    width: 100%; /* Make each project take the full width */
+    margin-bottom: 20px;
+    border: 1px solid #eee;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f4f4f4;
+}
+
+#contact {
+    background-color: #f8f8f8;
+    padding: 60px 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.cont1 {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.contacts {
+    background-color: #f8f8f8;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.cn {
+    background-color: white;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
 }
 
 
