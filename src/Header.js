@@ -2,7 +2,7 @@ import React from 'react'
 import TypingAnimation from './TypingAnimation'
 function Header() {
 
-
+// hi
   return (
     <div>
        <header>
