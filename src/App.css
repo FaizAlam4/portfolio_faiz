@@ -132,6 +132,65 @@ body {
   }
 }
 
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes rotateIn {
+  from {
+    opacity: 0;
+    transform: rotate(-10deg) scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(0) scale(1);
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 /* ===== UTILITY CLASSES ===== */
 .container {
   max-width: 1200px;
@@ -204,7 +263,8 @@ button {
 
 /* Section spacing */
 section {
-  padding: 20px 0;
+  padding: 80px 0;
+  position: relative;
 }
 
 /* Header */
@@ -214,8 +274,9 @@ header {
   z-index: 100;
   background: var(--header-bg);
   backdrop-filter: blur(10px);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  transition: background 0.3s ease;
+  box-shadow: 0 4px 30px rgba(99, 102, 241, 0.1);
+  transition: all 0.3s ease;
+  border-bottom: 1px solid rgba(99, 102, 241, 0.1);
 }
 
 nav {
@@ -226,25 +287,32 @@ nav {
 }
 
 nav h1 {
-  font-size: 24px;
-  font-weight: 700;
+  font-size: 26px;
+  font-weight: 800;
   background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  transition: all 0.3s ease;
+}
+
+nav h1:hover {
+  transform: scale(1.05);
 }
 
 .myList {
   display: flex;
   list-style: none;
-  gap: 40px;
+  gap: 50px;
   margin: 0;
 }
 
 .myList a {
   font-weight: 600;
   position: relative;
-  color: var(--text-dark);
+  color: var(--text-primary);
+  transition: all 0.3s ease;
+  padding: 8px 0;
 }
 
 .myList a::after {
@@ -263,14 +331,47 @@ nav h1 {
 }
 
 /* Hero Section */
+#hero {
+  position: relative;
+  overflow: hidden;
+  padding: 80px 0;
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.05) 0%, rgba(236, 72, 153, 0.03) 100%);
+}
+
+#hero::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: float 6s ease-in-out infinite;
+}
+
+#hero::after {
+  content: '';
+  position: absolute;
+  bottom: -30%;
+  left: -5%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(236, 72, 153, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: float 8s ease-in-out infinite reverse;
+}
+
 .hero-content {
   text-align: center;
-  padding: 30px 0px 100px 0px;
+  padding: 80px 20px;
   animation: fadeInUp 1s ease-out;
+  position: relative;
+  z-index: 1;
 }
 
 .hero-content h1 {
-  font-size: 48px;
+  font-size: 56px;
   font-weight: 800;
   margin-bottom: 20px;
   background: linear-gradient(135deg, var(--primary-color), var(--secondary-color), var(--accent-color));
@@ -278,43 +379,76 @@ nav h1 {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   line-height: 1.2;
+  animation: slideUp 0.8s ease-out;
 }
 
 .hero-content p {
   font-size: 20px;
   color: var(--text-secondary);
   margin-bottom: 30px;
+  animation: slideUp 0.8s ease-out 0.2s both;
 }
 
 /* About Section */
+#about {
+  padding: 80px 0;
+  background: linear-gradient(180deg, transparent 0%, rgba(99, 102, 241, 0.02) 50%, transparent 100%);
+}
+
 .profile-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 40px;
+  gap: 60px;
   align-items: center;
-  padding: 40px;
-  border-radius: 15px;
-  background: linear-gradient(135deg, rgba(99, 102, 241, 0.05) 0%, rgba(236, 72, 153, 0.05) 100%);
-  transition: background 0.3s ease;
+  padding: 60px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.08) 0%, rgba(236, 72, 153, 0.05) 100%);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(99, 102, 241, 0.1);
+  transition: all 0.3s ease;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.profile-container:hover {
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.12) 0%, rgba(236, 72, 153, 0.08) 100%);
+  transform: translateY(-5px);
+  box-shadow: 0 20px 50px rgba(99, 102, 241, 0.15);
 }
 
 .profile-image {
   text-align: center;
   animation: slideInLeft 0.8s ease-out;
+  position: relative;
+}
+
+.profile-image::before {
+  content: '';
+  position: absolute;
+  inset: -5px;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  border-radius: 20px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+.profile-image:hover::before {
+  opacity: 0.3;
 }
 
 .profile-image img {
   max-width: 100%;
   border-radius: 20px;
   box-shadow: var(--card-shadow);
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   width: 100%;
   height: auto;
+  position: relative;
 }
 
 .profile-image img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 30px 40px -10px rgba(99, 102, 241, 0.3);
+  transform: scale(1.08) rotate(2deg);
+  box-shadow: 0 30px 60px -10px rgba(99, 102, 241, 0.4), 0 0 30px rgba(99, 102, 241, 0.2);
 }
 
 .profile-content {
@@ -335,6 +469,10 @@ nav h1 {
 }
 
 /* Project Cards */
+#projects {
+  background: linear-gradient(180deg, transparent 0%, rgba(99, 102, 241, 0.02) 50%, transparent 100%);
+  position: relative;
+}
 .projects-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -344,10 +482,10 @@ nav h1 {
 
 .project-card {
   background: var(--card-bg);
-  border-radius: 15px;
-  padding: 30px;
+  border-radius: 18px;
+  padding: 35px;
   box-shadow: var(--card-shadow);
-  transition: all 0.4s ease;
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   animation: fadeInUp 0.8s ease-out;
   position: relative;
   overflow: hidden;
@@ -362,17 +500,31 @@ nav h1 {
   width: 100%;
   height: 100%;
   background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-  transition: left 0.5s ease;
+  transition: left 0.6s ease;
   z-index: 1;
+}
+
+.project-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(236, 72, 153, 0.05) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 0;
 }
 
 .project-card:hover::before {
   left: 100%;
 }
 
+.project-card:hover::after {
+  opacity: 1;
+}
+
 .project-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 30px 50px rgba(99, 102, 241, 0.2);
+  transform: translateY(-15px) scale(1.02);
+  box-shadow: 0 40px 80px rgba(99, 102, 241, 0.3);
   border-color: var(--primary-color);
 }
 
@@ -441,15 +593,30 @@ nav h1 {
 
 .project-link {
   flex: 1;
-  padding: 10px 16px;
-  border-radius: 8px;
+  padding: 12px 20px;
+  border-radius: 10px;
   font-weight: 600;
-  font-size: 13px;
+  font-size: 14px;
   text-align: center;
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   border: 2px solid var(--primary-color);
   color: var(--primary-color);
   text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(236, 72, 153, 0.05) 100%);
+}
+
+.project-link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: var(--primary-color);
+  z-index: -1;
+  transition: left 0.4s ease;
 }
 
 .project-link:first-child {
@@ -458,9 +625,26 @@ nav h1 {
   border: none;
 }
 
+.project-link:first-child::before {
+  display: none;
+}
+
 .project-link:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(99, 102, 241, 0.3);
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 15px 40px rgba(99, 102, 241, 0.4);
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  border-color: var(--secondary-color);
+}
+
+.project-link:not(:first-child)::before {
+  left: 0;
+  background: transparent;
+  border: 2px solid var(--primary-color);
+}
+
+.project-link:not(:first-child):hover::before {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
 }
 
 /* Work Experience Section */
@@ -492,16 +676,33 @@ nav h1 {
 
 .work-card {
   background: var(--card-bg);
-  padding: 35px;
-  border-radius: 15px;
+  padding: 40px;
+  border-radius: 18px;
   box-shadow: var(--card-shadow);
-  border-left: 5px solid #8b5cf6;
-  transition: all 0.3s ease;
+  border-left: 6px solid #8b5cf6;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+  animation: slideUp 0.8s ease-out;
+}
+
+.work-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.1) 0%, transparent 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 .work-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 40px rgba(139, 92, 246, 0.2);
+  transform: translateY(-10px) translateX(5px);
+  box-shadow: 0 25px 60px rgba(139, 92, 246, 0.3);
+  border-left-color: var(--primary-color);
+}
+
+.work-card:hover::before {
+  opacity: 1;
 }
 
 .work-card h3 {
@@ -671,53 +872,83 @@ nav h1 {
 #contact {
   background: linear-gradient(135deg, rgba(99, 102, 241, 0.08) 0%, rgba(236, 72, 153, 0.05) 100%);
   color: var(--text-primary);
-  padding: 60px 0;
+  padding: 100px 0;
+  position: relative;
+}
+
+#contact::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 20% 50%, rgba(99, 102, 241, 0.05) 0%, transparent 50%),
+              radial-gradient(circle at 80% 50%, rgba(236, 72, 153, 0.05) 0%, transparent 50%);
+  pointer-events: none;
 }
 
 #contact h2 {
-  font-size: 36px;
+  font-size: 42px;
   font-weight: 700;
   margin-bottom: 40px;
   text-align: center;
-  animation: fadeInUp 0.8s ease-out;
+  animation: slideUp 0.8s ease-out;
   background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  position: relative;
+  z-index: 1;
 }
 
 .cont1 {
   text-align: center;
+  position: relative;
+  z-index: 1;
 }
 
 .mycontact {
   font-size: 18px;
-  margin-bottom: 30px;
-  animation: fadeInUp 1s ease-out;
+  margin-bottom: 50px;
+  animation: slideUp 1s ease-out 0.1s both;
   color: var(--text-secondary);
 }
 
 .contacts {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 25px;
-  margin-top: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 50px;
 }
 
 .cn {
-  padding: 20px;
+  padding: 35px;
   background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(236, 72, 153, 0.08) 100%);
-  border-radius: 12px;
-  border: 1px solid rgba(99, 102, 241, 0.15);
-  animation: scaleIn 0.6s ease-out;
-  transition: all 0.3s ease;
+  border-radius: 16px;
+  border: 1.5px solid rgba(99, 102, 241, 0.15);
+  animation: bounceIn 0.6s ease-out;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(5px);
+}
+
+.cn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.2) 0%, transparent 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 .cn:hover {
   background: linear-gradient(135deg, rgba(99, 102, 241, 0.15) 0%, rgba(236, 72, 153, 0.12) 100%);
-  transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(99, 102, 241, 0.15);
-  border-color: rgba(99, 102, 241, 0.25);
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 20px 50px rgba(99, 102, 241, 0.25);
+  border-color: rgba(99, 102, 241, 0.35);
+}
+
+.cn:hover::before {
+  opacity: 1;
 }
 
 .cn strong {
@@ -742,33 +973,59 @@ nav h1 {
 
 /* Footer */
 footer {
-  background: linear-gradient(135deg, rgba(99, 102, 241, 0.08) 0%, rgba(236, 72, 153, 0.05) 100%);
+  background: linear-gradient(180deg, transparent 0%, rgba(99, 102, 241, 0.03) 50%, transparent 100%);
   color: var(--text-primary);
-  padding: 15px 0;
+  padding: 30px 0 20px;
   text-align: center;
-  border-top: 1px solid rgba(99, 102, 241, 0.15);
+  border-top: 1.5px solid rgba(99, 102, 241, 0.2);
+  position: relative;
+  margin-top: 60px;
+}
+
+footer::before {
+  content: '';
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
 }
 
 footer p {
   color: var(--text-primary);
-  margin: 0;
+  margin: 8px 0;
+  font-size: 14px;
+  transition: all 0.3s ease;
 }
 
 footer a {
   color: var(--primary-color);
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  padding: 2px 4px;
+}
+
+footer a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--secondary-color);
+  transition: width 0.3s ease;
 }
 
 footer a:hover {
   color: var(--secondary-color);
-  text-decoration: underline;
+  transform: translateY(-2px);
 }
 
-footer p {
-  margin: 0;
-  font-size: 14px;
-  color: rgba(255, 255, 255, 0.85);
+footer a:hover::after {
+  width: 100%;
 }
 
 /* Responsive Design */
