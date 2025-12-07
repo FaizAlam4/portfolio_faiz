@@ -1,6 +1,6 @@
 import React from 'react'
 
-import  { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import './TypingAnimation.css';
 
 const TypingAnimation = ({ textArray, typingSpeed }) => {
@@ -27,7 +27,16 @@ const TypingAnimation = ({ textArray, typingSpeed }) => {
   }, [currentIndex, displayText, textArray, typingSpeed]);
 
   return (
-    <h1 className="typing-animation">
+    <h1 className="typing-animation" style={{
+      fontSize: '48px',
+      fontWeight: '800',
+      background: 'linear-gradient(135deg, #6366f1, #ec4899, #8b5cf6)',
+      WebkitBackgroundClip: 'text',
+      WebkitTextFillColor: 'transparent',
+      backgroundClip: 'text',
+      lineHeight: '1.2',
+      minHeight: '60px'
+    }}>
       {displayText}
       <span className="blinking-cursor">|</span>
     </h1>
