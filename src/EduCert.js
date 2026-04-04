@@ -1,132 +1,136 @@
-import React from 'react'
+import React from 'react';
+import { motion } from 'framer-motion';
 
 const EduCert = () => {
+  const certifications = [
+    { name: 'Node JS', provider: 'CipherSchool', color: '#6366f1' },
+    { name: 'Database Management', provider: 'Coursera', color: '#ec4899' },
+    { name: 'DevOps Certification', provider: 'CipherSchool', color: '#8b5cf6' },
+    { name: 'DSA Self-paced', provider: 'GeeksforGeeks', color: '#6366f1' },
+    { name: 'GitHub Master Course', provider: 'Udemy', color: '#ec4899' }
+  ];
+
   return (
     <section id="education" className="education-section">
       <div className="container">
-        <h2 style={{
-          fontSize: '36px',
-          fontWeight: '700',
-          marginBottom: '50px',
-          textAlign: 'center',
-          background: 'linear-gradient(135deg, #6366f1, #ec4899)',
-          WebkitBackgroundClip: 'text',
-          WebkitTextFillColor: 'transparent',
-          backgroundClip: 'text'
-        }}>Education & Certifications</h2>
+        <motion.h2 
+          className="section-title"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          style={{
+            fontSize: '36px',
+            fontWeight: '700',
+            textAlign: 'center',
+            marginBottom: '60px',
+            background: 'linear-gradient(135deg, #6366f1, #ec4899)',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
+            backgroundClip: 'text'
+          }}
+        >
+          Education & Certifications
+        </motion.h2>
         
-        <div className="education-timeline">
-          {/* Education Items */}
-          <div className="education-item">
-            <h3>🎓 Bachelor of Technology</h3>
-            <p><strong>Computer Science Engineering</strong></p>
-            <p><strong>Institution:</strong> Lovely Professional University</p>
-            <p><strong>Duration:</strong> 2020 - 2024</p>
-            <p><strong style={{ color: '#6366f1', fontSize: '16px' }}>CGPA: 9.05/10</strong></p>
-          </div>
-
-          <div className="education-item">
-            <h3>📚 Higher Secondary (12th)</h3>
-            <p><strong>Central Board of Secondary Education (CBSE)</strong></p>
-            <p><strong>Institution:</strong> Kendriya Vidyalaya No. 1</p>
-            <p><strong style={{ color: '#6366f1', fontSize: '16px' }}>Percentage: 91.6%</strong></p>
-          </div>
-
-          {/* Certifications Section */}
-          <div style={{
-            marginTop: '40px',
-            padding: '30px',
-            background: 'var(--card-bg)',
-            borderRadius: '15px',
-            boxShadow: 'var(--card-shadow)',
-            border: '1px solid rgba(99, 102, 241, 0.1)',
-            animation: 'fadeInUp 0.8s ease-out',
-            transition: 'background 0.3s ease, box-shadow 0.3s ease'
-          }}>
-            <h3 style={{ 
-              fontSize: '24px',
-              fontWeight: '700',
-              marginBottom: '20px',
-              color: 'var(--text-primary)'
-            }}>
-              🏆 Professional Certifications
-            </h3>
-            
-            <div style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
-              gap: '15px'
-            }}>
-              <div style={{
-                padding: '15px',
-                background: 'linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(236, 72, 153, 0.1) 100%)',
-                borderRadius: '10px',
-                borderLeft: '4px solid #6366f1',
-                transition: 'all 0.3s ease'
-              }}>
-                <p style={{ margin: '0', fontWeight: '600', color: 'var(--text-primary)' }}>Node JS</p>
-                <p style={{ margin: '5px 0 0 0', fontSize: '13px', color: 'var(--text-secondary)' }}>CipherSchool</p>
-              </div>
-
-              <div style={{
-                padding: '15px',
-                background: 'linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(236, 72, 153, 0.1) 100%)',
-                borderRadius: '10px',
-                borderLeft: '4px solid #ec4899',
-                transition: 'all 0.3s ease'
-              }}>
-                <p style={{ margin: '0', fontWeight: '600', color: 'var(--text-primary)' }}>Database Management</p>
-                <p style={{ margin: '5px 0 0 0', fontSize: '13px', color: 'var(--text-secondary)' }}>Coursera</p>
-              </div>
-
-              <div style={{
-                padding: '15px',
-                background: 'linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(236, 72, 153, 0.1) 100%)',
-                borderRadius: '10px',
-                borderLeft: '4px solid #8b5cf6',
-                transition: 'all 0.3s ease'
-              }}>
-                <p style={{ margin: '0', fontWeight: '600', color: 'var(--text-primary)' }}>DevOps Certification</p>
-                <p style={{ margin: '5px 0 0 0', fontSize: '13px', color: 'var(--text-secondary)' }}>CipherSchool</p>
-              </div>
-
-              <div style={{
-                padding: '15px',
-                background: 'linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(236, 72, 153, 0.1) 100%)',
-                borderRadius: '10px',
-                borderLeft: '4px solid #6366f1',
-                transition: 'all 0.3s ease'
-              }}>
-                <p style={{ margin: '0', fontWeight: '600', color: 'var(--text-primary)' }}>DSA Self-paced</p>
-                <p style={{ margin: '5px 0 0 0', fontSize: '13px', color: 'var(--text-secondary)' }}>GeeksforGeeks</p>
-              </div>
-
-              <div style={{
-                padding: '15px',
-                background: 'linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(236, 72, 153, 0.1) 100%)',
-                borderRadius: '10px',
-                borderLeft: '4px solid #ec4899',
-                transition: 'all 0.3s ease'
-              }}>
-                <p style={{ margin: '0', fontWeight: '600', color: 'var(--text-primary)' }}>GitHub Master Course</p>
-                <p style={{ margin: '5px 0 0 0', fontSize: '13px', color: 'var(--text-secondary)' }}>Udemy</p>
+        {/* Education Cards Grid */}
+        <div className="education-grid">
+          <motion.div 
+            className="education-card"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            whileHover={{ y: -8, boxShadow: '0 20px 50px rgba(99, 102, 241, 0.25)' }}
+          >
+            <div className="education-icon">🎓</div>
+            <h3 className="education-degree">Bachelor of Technology</h3>
+            <p className="education-major">Computer Science Engineering</p>
+            <div className="education-details">
+              <p className="education-institution">Lovely Professional University</p>
+              <p className="education-duration">2020 - 2024</p>
+              <div className="education-grade">
+                <span className="grade-label">CGPA:</span>
+                <span className="grade-value">9.05/10</span>
               </div>
             </div>
+          </motion.div>
 
-            <a 
-              href="https://drive.google.com/drive/folders/1lepuDQLsZsN3qQQ6tm1knUtB7fWtzdCc?usp=sharing"
-              target="_blank"
-              rel="noreferrer"
-              className="cert-link"
-              style={{ marginTop: '20px', display: 'inline-block' }}
-            >
-              📂 View Certificate Folder
-            </a>
-          </div>
+          <motion.div 
+            className="education-card"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.15 }}
+            whileHover={{ y: -8, boxShadow: '0 20px 50px rgba(236, 72, 153, 0.25)' }}
+          >
+            <div className="education-icon">📚</div>
+            <h3 className="education-degree">Higher Secondary (12th)</h3>
+            <p className="education-major">Central Board of Secondary Education</p>
+            <div className="education-details">
+              <p className="education-institution">Kendriya Vidyalaya No. 1</p>
+              <p className="education-duration">CBSE Board</p>
+              <div className="education-grade">
+                <span className="grade-label">Percentage:</span>
+                <span className="grade-value">91.6%</span>
+              </div>
+            </div>
+          </motion.div>
         </div>
+
+        {/* Certifications Section */}
+        <motion.div 
+          className="certifications-container"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+        >
+          <div className="certifications-header">
+            <h3 className="certifications-title">
+              <span className="cert-icon">🏆</span>
+              Professional Certifications
+            </h3>
+            <p className="certifications-subtitle">Industry-recognized credentials that enhance my technical expertise</p>
+          </div>
+          
+          <div className="certifications-grid">
+            {certifications.map((cert, index) => (
+              <motion.div 
+                key={cert.name}
+                className="cert-card"
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: index * 0.08 }}
+                whileHover={{ scale: 1.05, y: -5 }}
+                style={{ '--cert-color': cert.color }}
+              >
+                <div className="cert-content">
+                  <p className="cert-name">{cert.name}</p>
+                  <p className="cert-provider">{cert.provider}</p>
+                </div>
+                <div className="cert-badge">✓</div>
+              </motion.div>
+            ))}
+          </div>
+
+          <motion.a 
+            href="https://drive.google.com/drive/folders/1lepuDQLsZsN3qQQ6tm1knUtB7fWtzdCc?usp=sharing"
+            target="_blank"
+            rel="noreferrer"
+            className="view-certificates-btn"
+            whileHover={{ scale: 1.05, y: -2 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <span className="btn-icon">📂</span>
+            <span>View All Certificates</span>
+            <span className="btn-arrow">→</span>
+          </motion.a>
+        </motion.div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default EduCert
+export default EduCert;

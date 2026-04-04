@@ -28,14 +28,15 @@ const TypingAnimation = ({ textArray, typingSpeed }) => {
 
   return (
     <h1 className="typing-animation" style={{
-      fontSize: '48px',
+      fontSize: '52px',
       fontWeight: '800',
       background: 'linear-gradient(135deg, #6366f1, #ec4899, #8b5cf6)',
       WebkitBackgroundClip: 'text',
       WebkitTextFillColor: 'transparent',
       backgroundClip: 'text',
       lineHeight: '1.2',
-      minHeight: '60px'
+      minHeight: '70px',
+      marginBottom: '5px'
     }}>
       {displayText}
       <span className="blinking-cursor">|</span>
