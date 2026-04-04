@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/portfolio_faiz/static/css/main.891e8a2e.css",
-    "main.js": "/portfolio_faiz/static/js/main.16240227.js",
+    "main.css": "/portfolio_faiz/static/css/main.455d3a1b.css",
+    "main.js": "/portfolio_faiz/static/js/main.8003f72d.js",
     "static/js/453.f7ddbcda.chunk.js": "/portfolio_faiz/static/js/453.f7ddbcda.chunk.js",
     "static/media/faiz1.jpg": "/portfolio_faiz/static/media/faiz1.f05d99246bb64c7bdac9.jpg",
     "index.html": "/portfolio_faiz/index.html",
-    "main.891e8a2e.css.map": "/portfolio_faiz/static/css/main.891e8a2e.css.map",
-    "main.16240227.js.map": "/portfolio_faiz/static/js/main.16240227.js.map",
+    "main.455d3a1b.css.map": "/portfolio_faiz/static/css/main.455d3a1b.css.map",
+    "main.8003f72d.js.map": "/portfolio_faiz/static/js/main.8003f72d.js.map",
     "453.f7ddbcda.chunk.js.map": "/portfolio_faiz/static/js/453.f7ddbcda.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.891e8a2e.css",
-    "static/js/main.16240227.js"
+    "static/css/main.455d3a1b.css",
+    "static/js/main.8003f72d.js"
   ]
 }
