@@ -2,8 +2,6 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const Footer = () => {
-  const date = new Date();
-
   const socialLinks = [
     { name: 'LinkedIn', url: 'https://www.linkedin.com/in/faiz-alam-9179b6135/', icon: '💼' },
     { name: 'GitHub', url: 'https://github.com/FaizAlam4', icon: '💻' },
@@ -12,93 +10,78 @@ const Footer = () => {
   ];
 
   return (
-    <footer id="contact" style={{
-      background: 'var(--bg-secondary)',
-      borderTop: '1px solid var(--border-color)',
-      padding: '40px 0 20px 0',
-      marginTop: '60px'
-    }}>
-      <div className="container" style={{ textAlign: 'center' }}>
-        {/* Social Links */}
-        <div style={{ 
-          display: 'flex', 
-          justifyContent: 'center', 
-          gap: '20px', 
-          flexWrap: 'wrap',
-          marginBottom: '25px' 
-        }}>
-          {socialLinks.map((link, index) => (
-            <motion.a
-              key={link.name}
-              href={link.url}
-              target="_blank"
-              rel="noreferrer"
-              style={{
-                display: 'flex',
-                alignItems: 'center',
-                gap: '8px',
-                padding: '10px 20px',
-                background: 'var(--card-bg)',
-                borderRadius: '8px',
-                color: 'var(--text-primary)',
-                fontWeight: '600',
-                fontSize: '14px',
-                boxShadow: '0 2px 8px rgba(0, 0, 0, 0.1)',
-                transition: 'all 0.3s ease'
-              }}
-              whileHover={{ 
-                scale: 1.05,
-                boxShadow: '0 4px 12px rgba(99, 102, 241, 0.3)'
-              }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <span>{link.icon}</span>
-              <span>{link.name}</span>
-            </motion.a>
-          ))}
-        </div>
+    <>
+      <section className="contact-last-section" id="contact">
+        <div className="container contact-last-wrap">
+          <div className="contact-last-accent" />
+          <motion.div
+            className="contact-last-intro"
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.45 }}
+          >
+            <h3>Let's Connect</h3>
+            <p>Open to software engineering roles, collaboration, and meaningful tech conversations.</p>
+          </motion.div>
 
-        {/* Copyright */}
-        <p style={{ 
-          margin: '0', 
-          color: 'var(--text-primary)',
-          fontSize: '14px',
-          fontWeight: '500'
-        }}>
-          Built with <span style={{ color: '#ec4899' }}>❤️</span> by Faiz Alam | 
-          <span style={{ marginLeft: '10px' }}>© {date.getFullYear()} All rights reserved.</span>
-        </p>
-        
-        {/* Email */}
-        <p style={{ 
-          margin: '10px 0 0 0', 
-          fontSize: '13px',
-          color: 'var(--text-secondary)'
-        }}>
-          <a 
-            href="mailto:mfaizalam32@gmail.com"
-            style={{ 
-              color: 'var(--primary-color)',
-              textDecoration: 'none',
-              fontWeight: '600'
-            }}
+          <motion.div
+            className="contact-last-grid"
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.45, delay: 0.08 }}
           >
-            mfaizalam32@gmail.com
-          </a>
-          {' | '}
-          <a 
-            href="tel:+917987072308"
-            style={{ 
-              color: 'var(--primary-color)',
-              textDecoration: 'none',
-              fontWeight: '600'
-            }}
-          >
-            +91 7987072308
-          </a>
-        </p>
-      </div>
-    </footer>
+            <div className="contact-last-card">
+              <h4>Find Me On</h4>
+              <ul className="contact-last-social-list">
+                {socialLinks.map((link) => (
+                  <li key={link.name}>
+                    <motion.a
+                      href={link.url}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="contact-last-link"
+                      whileHover={{ x: 4 }}
+                      whileTap={{ scale: 0.96 }}
+                    >
+                      <span className="contact-last-icon">{link.icon}</span>
+                      <span>{link.name}</span>
+                    </motion.a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="contact-last-card">
+              <h4>Direct Contact</h4>
+              <ul className="contact-last-contact-list">
+                <li>
+                  <a href="mailto:mfaizalam32@gmail.com" className="contact-last-link">
+                    <span className="contact-last-icon">✉️</span>
+                    <span>mfaizalam32@gmail.com</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="tel:+917987072308" className="contact-last-link">
+                    <span className="contact-last-icon">📞</span>
+                    <span>+91 79870 72308</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      <footer className="footer">
+        <div className="container footer-minimal-wrap">
+          <p className="footer-copy">
+            Built with <span className="footer-heart">❤️</span> by Faiz Alam
+          </p>
+        </div>
+      </footer>
+    </>
   );
 };
 

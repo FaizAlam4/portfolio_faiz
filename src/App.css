@@ -1596,6 +1596,7 @@ nav h1:hover {
 .view-certificates-btn:hover {
   transform: translateY(-2px);
   box-shadow: 0 15px 40px rgba(99, 102, 241, 0.4);
+  color: #ffffff;
 }
 
 .btn-icon {
@@ -1777,61 +1778,177 @@ nav h1:hover {
   text-decoration: underline;
 }
 
-/* Footer */
-footer {
-  background: linear-gradient(180deg, transparent 0%, rgba(99, 102, 241, 0.03) 50%, transparent 100%);
-  color: var(--text-primary);
-  padding: 30px 0 20px;
-  text-align: center;
-  border-top: 1.5px solid rgba(99, 102, 241, 0.2);
-  position: relative;
+/* Contact Last Section + Minimal Footer */
+.contact-last-section {
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--bg-secondary) 88%, var(--primary-color) 12%) 0%,
+    var(--bg-secondary) 100%
+  );
+  border-top: 1px solid var(--border-color);
   margin-top: 60px;
+  padding: 80px 0;
 }
 
-footer::before {
-  content: '';
-  position: absolute;
-  top: -40px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100px;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
+.contact-last-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
 }
 
-footer p {
+.contact-last-accent {
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color), var(--accent-color));
+  margin: 0 0 20px 0;
+  border-radius: 2px;
+}
+
+.contact-last-intro {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.contact-last-intro h3 {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 700;
   color: var(--text-primary);
-  margin: 8px 0;
-  font-size: 14px;
-  transition: all 0.3s ease;
 }
 
-footer a {
-  color: var(--primary-color);
+.contact-last-intro p {
+  margin: 10px auto 0;
+  max-width: 680px;
+  color: var(--text-secondary);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.contact-last-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+}
+
+.contact-last-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 22px 24px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="dark"] .contact-last-card {
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.35);
+}
+
+.contact-last-card h4 {
+  margin: 0 0 14px;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.contact-last-social-list,
+.contact-last-contact-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.contact-last-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text-secondary) !important;
   text-decoration: none;
-  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  position: relative;
-  padding: 2px 4px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.4;
+  padding: 0 !important;
 }
 
-footer a::after {
-  content: '';
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: var(--secondary-color);
-  transition: width 0.3s ease;
+.contact-last-link:hover {
+  color: var(--primary-color) !important;
 }
 
-footer a:hover {
-  color: var(--secondary-color);
-  transform: translateY(-2px);
+.contact-last-link::after {
+  display: none !important;
 }
 
-footer a:hover::after {
-  width: 100%;
+.contact-last-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-tertiary);
+  flex-shrink: 0;
+}
+
+.footer {
+  margin-top: 0;
+  background: var(--bg-primary);
+  border-top: 1px solid var(--border-color);
+}
+
+.footer::before {
+  display: none;
+}
+
+.footer-minimal-wrap {
+  padding: 18px 0;
+  text-align: center;
+}
+
+.footer-copy {
+  margin: 0;
+  font-size: 13px;
+  color: var(--text-tertiary);
+}
+
+.footer-heart {
+  color: #ec4899;
+}
+
+@media (max-width: 900px) {
+  .contact-last-intro h3 {
+    font-size: 27px;
+  }
+}
+
+@media (max-width: 640px) {
+  .contact-last-section {
+    padding: 60px 0;
+  }
+
+  .contact-last-accent {
+    margin: -60px 0 0 0;
+  }
+
+  .contact-last-intro h3 {
+    font-size: 24px;
+  }
+
+  .contact-last-intro p {
+    font-size: 14px;
+  }
+
+  .contact-last-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .contact-last-card {
+    padding: 18px;
+  }
+
+  .contact-last-link {
+    font-size: 13px;
+  }
 }
 
 /* Responsive Design */
