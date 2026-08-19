@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/portfolio_faiz/static/css/main.f6e98813.css",
-    "main.js": "/portfolio_faiz/static/js/main.63e2da26.js",
+    "main.js": "/portfolio_faiz/static/js/main.2807ed9e.js",
     "static/js/453.f7ddbcda.chunk.js": "/portfolio_faiz/static/js/453.f7ddbcda.chunk.js",
     "static/media/faiz1.jpg": "/portfolio_faiz/static/media/faiz1.f05d99246bb64c7bdac9.jpg",
     "index.html": "/portfolio_faiz/index.html",
     "main.f6e98813.css.map": "/portfolio_faiz/static/css/main.f6e98813.css.map",
-    "main.63e2da26.js.map": "/portfolio_faiz/static/js/main.63e2da26.js.map",
+    "main.2807ed9e.js.map": "/portfolio_faiz/static/js/main.2807ed9e.js.map",
     "453.f7ddbcda.chunk.js.map": "/portfolio_faiz/static/js/453.f7ddbcda.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f6e98813.css",
-    "static/js/main.63e2da26.js"
+    "static/js/main.2807ed9e.js"
   ]
 }
