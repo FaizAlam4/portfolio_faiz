@@ -182,10 +182,11 @@ const PortBody = () => {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 1.8 }}
                     >
-                        <h3 className="hero-skills-title">Core Expertise</h3>
+                        <h3 className="hero-skills-title">Technical Skills</h3>
                         <div className="hero-skills-tags">
-                            {['Microservices', 'Event-Driven Architecture', 'Payment Systems', 'System Design', 
-                              'REST APIs', 'OAuth2 & SSO', 'Observability', 'Team Leadership'].map((skill, idx) => (
+                            {['JavaScript', 'Python', 'Java', 'React', 'Node.js', 'AWS (EKS, EC2)', 'Azure', 
+                              'Kubernetes', 'Docker', 'Terraform', 'PostgreSQL', 'Redis', 'Azure Service Bus', 
+                              'Grafana', 'OpenSearch', 'Keycloak'].map((skill, idx) => (
                                 <motion.span 
                                     key={skill}
                                     className="hero-skill-tag"
