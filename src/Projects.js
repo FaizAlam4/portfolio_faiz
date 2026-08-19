@@ -6,15 +6,16 @@ const Projects = () => {
     {
       id: 1,
       title: "Job Pulse",
-      domain: "Full-Stack Job Aggregation Platform",
-      tech: "Next.js | Fastify | MongoDB | Redux Toolkit | PWA",
-      description: "A comprehensive job aggregation platform designed to streamline job tracking with personalized analytics, deduplication, and scalable APIs.",
+      domain: "AI-Powered Job Aggregation & Resume Analysis Platform",
+      tech: "Docker | AWS (EKS) | Terraform | Kubernetes | Groq/Azure OpenAI | Redis",
+      description: "A job aggregation platform with an AI resume analyzer, composite ranking engine, and fully containerized microservices.",
       features: [
-        "Personalized analytics and tracking",
-        "Deduplication, ranking, and filtering",
-        "Scalable APIs with caching and rate limiting",
-        "Kanban workflows and dashboards",
-        "Responsive PWA with offline support"
+        "Built AI resume analyzer (Groq/Azure OpenAI)",
+        "Automated a Cron-based engine to ingest and deduplicate listings via SHA256",
+        "Designed composite ranking engine backed by Redis cache-aside (sub-5ms read latency)",
+        "Containerized services with Docker, 183 automated tests (81% coverage) via GitHub Actions CI/CD",
+        "Provisioned Kubernetes cluster on AWS (EKS) using Terraform",
+        "Configured HPA, ALB ingress, and rolling deployments for zero-downtime releases"
       ],
       links: {
         demo: "http://job-pulse-ten.vercel.app/",

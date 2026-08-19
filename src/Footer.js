@@ -3,10 +3,9 @@ import { motion } from 'framer-motion';
 
 const Footer = () => {
   const socialLinks = [
-    { name: 'LinkedIn', url: 'https://www.linkedin.com/in/faiz-alam-9179b6135/', icon: '💼' },
+    { name: 'LinkedIn', url: 'https://www.linkedin.com/in/faizalam4/', icon: '💼' },
     { name: 'GitHub', url: 'https://github.com/FaizAlam4', icon: '💻' },
-    { name: 'LeetCode', url: 'https://leetcode.com/u/FaizNexus/', icon: '🧩' },
-    { name: 'GeeksforGeeks', url: 'https://www.geeksforgeeks.org/profile/faiza232574', icon: '🚀' }
+    { name: 'LeetCode', url: 'https://leetcode.com/u/FaizNexus/', icon: '🧩' }
   ];
 
   return (

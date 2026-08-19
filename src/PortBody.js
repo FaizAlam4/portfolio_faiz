@@ -11,10 +11,9 @@ const PortBody = () => {
     const typingSpeed = 2000;
 
     const socialLinks = [
-        { name: 'LinkedIn', url: 'https://www.linkedin.com/in/faiz-alam-9179b6135/', icon: '💼' },
+        { name: 'LinkedIn', url: 'https://www.linkedin.com/in/faizalam4/', icon: '💼' },
         { name: 'GitHub', url: 'https://github.com/FaizAlam4', icon: '💻' },
-        { name: 'LeetCode', url: 'https://leetcode.com/u/FaizNexus/', icon: '🧩' },
-        { name: 'GeeksforGeeks', url: 'https://www.geeksforgeeks.org/profile/faiza232574', icon: '🚀' }
+        { name: 'LeetCode', url: 'https://leetcode.com/u/FaizNexus/', icon: '🧩' }
     ];
 
     return (
@@ -111,7 +110,7 @@ const PortBody = () => {
                                     transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
                                 >
                                     <span className="badge-emoji">💼</span>
-                                    <span className="badge-text">2+ Years</span>
+                                    <span className="badge-text">2.8+ Years</span>
                                 </motion.div>
                                 
                                 <motion.div 
@@ -147,7 +146,7 @@ const PortBody = () => {
                             whileHover={{ scale: 1.05, y: -5 }}
                             transition={{ duration: 0.3 }}
                         >
-                            <div className="stat-number">2+</div>
+                            <div className="stat-number">2.8+</div>
                             <div className="stat-label">Years Experience</div>
                         </motion.div>
                         <motion.div 
@@ -163,7 +162,7 @@ const PortBody = () => {
                             whileHover={{ scale: 1.05, y: -5 }}
                             transition={{ duration: 0.3 }}
                         >
-                            <div className="stat-number">200+</div>
+                            <div className="stat-number">350+</div>
                             <div className="stat-label">DSA Problems</div>
                         </motion.div>
                         <motion.div 

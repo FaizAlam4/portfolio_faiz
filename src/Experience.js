@@ -9,47 +9,31 @@ const Experience = () => {
       company: "AgNext Technologies Pvt. Ltd.",
       location: "Mohali, India",
       duration: "Mar 2025 - Present",
-      description: "Resolved inconsistent payment states via Razorpay integrations, improved scalability with event-driven microservices, and enhanced system observability.",
+      description: "Global deep-tech platform automating quality assurance across international agricultural trade markets.",
       responsibilities: [
-        "Resolved inconsistent payment states via Razorpay integrations (idempotent APIs, webhooks).",
-        "Improved scalability with event-driven microservices (Azure Service Bus).",
-        "Handled distributed edge cases using state machines with retry/rollback.",
-        "Improved incident response via observability pipelines (Grafana, Logstash, OpenSearch).",
-        "Secured systems via Keycloak auth (OAuth2, RBAC, SSO).",
-        "Enabled faster access using semantic search (Azure OpenAI + OpenSearch).",
-        "Boosted team efficiency by mentoring interns on backend design and API practices."
+        "Architected the Material Movement module to solve complex end-to-end lot traceability; drove real-time state updates to an executive dashboard via an event-driven Azure Service Bus pipeline.",
+        "Took end-to-end ownership of Grafana dashboards backed by a Logstash-to-OpenSearch pipeline with PostgreSQL materialized views -- cutting load times by 85%.",
+        "Implemented role-based multi-tenant access control across OpenSearch indices for centralized logging, reducing cross-team troubleshooting by over 50%.",
+        "Integrated Razorpay into the licensing flow; maintained idempotency and validated webhook signatures to safely handle failures.",
+        "Integrated Keycloak SSO (OAuth2/RBAC) authentication into the assurance application and routed APIs through a centralized gateway.",
+        "Prototyped a Retrieval-Augmented Generation (RAG) pipeline (Azure OpenAI) for automated data classification."
       ],
-      technologies: ["Node.js", "Next.js", "REST APIs", "Azure Service Bus", "Grafana", "OpenSearch", "Keycloak", "Razorpay"]
+      technologies: ["Node.js", "PostgreSQL", "Azure Service Bus", "Grafana", "OpenSearch", "Keycloak", "Razorpay", "Azure OpenAI"]
     },
     {
       id: 2,
-      position: "Software Engineer (Consultant via MountBlue)",
-      company: "AgNext Technologies Pvt. Ltd.",
-      location: "Mohali, India",
-      duration: "Feb 2024 - Feb 2025",
-      description: "Solved field reliability with an offline-first PWA, reduced delays via real-time systems, and ensured audit integrity through geo-validation workflows.",
-      responsibilities: [
-        "Solved field reliability via offline-first PWA (React, caching, sync).",
-        "Reduced delays via real-time systems (Socket.IO, Firebase) handling 2000+ daily events.",
-        "Ensured audit integrity through geo-validation workflows.",
-        "Improved performance by optimizing REST APIs and DB queries.",
-        "Enhanced visibility via attendance and tracking systems."
-      ],
-      technologies: ["React", "PWA", "Socket.IO", "Firebase", "REST APIs", "MongoDB"]
-    },
-    {
-      id: 3,
-      position: "Software Engineer Intern",
+      position: "Software Engineer (Intern -> Consultant)",
       company: "MountBlue Technologies Pvt. Ltd.",
       location: "Bengaluru, India",
-      duration: "Nov 2023 - Feb 2024",
-      description: "Trained in DSA, frontend, and backend technologies, and built applications that were selected for deployment.",
+      duration: "Nov 2023 - Feb 2025",
+      description: "Engineered scalable real-time systems and critical attendance pipelines while refactoring legacy schemas.",
       responsibilities: [
-        "Completed rigorous training in Data Structures and Algorithms.",
-        "Developed full-stack applications using MERN stack.",
-        "Contributed to projects that were deployed to production."
+        "Built the real-time notification delivery layer (bell-icon and push alerts) using Socket.IO and Firebase, supporting 2,000+ daily events.",
+        "Engineered a fraud-resistant attendance pipeline with geo-validation and selfie authentication; automated 3 distinct categories of audit reports.",
+        "Refactored legacy PostgreSQL transaction schemas to resolve memory bottlenecks.",
+        "Migrated the React frontend build pipeline from CRA to Vite, significantly accelerating local dev cycle times."
       ],
-      technologies: ["DSA", "JavaScript", "React", "Node.js", "MongoDB"]
+      technologies: ["React", "Socket.IO", "Firebase", "PostgreSQL", "Vite"]
     }
   ];
 

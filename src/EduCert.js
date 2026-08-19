@@ -3,11 +3,10 @@ import { motion } from 'framer-motion';
 
 const EduCert = () => {
   const certifications = [
-    { name: 'Node JS', provider: 'CipherSchool', color: '#6366f1' },
-    { name: 'Database Management', provider: 'Coursera', color: '#ec4899' },
-    { name: 'DevOps Certification', provider: 'CipherSchool', color: '#8b5cf6' },
-    { name: 'DSA Self-paced', provider: 'GeeksforGeeks', color: '#6366f1' },
-    { name: 'GitHub Master Course', provider: 'Udemy', color: '#ec4899' }
+    { name: 'Database Management Essentials', provider: 'Univ. of Colorado / Coursera', color: '#ec4899' },
+    { name: 'DBMS', provider: 'Infosys', color: '#8b5cf6' },
+    { name: 'Node.js & Backend', provider: 'CipherSchools', color: '#6366f1' },
+    { name: 'Self-Paced DSA', provider: 'GeeksforGeeks', color: '#6366f1' }
   ];
 
   return (
