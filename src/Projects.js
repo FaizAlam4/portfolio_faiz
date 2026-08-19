@@ -69,10 +69,10 @@ const Projects = () => {
             <motion.div 
               key={project.id} 
               className="project-card"
-              initial={{ opacity: 0, y: 50 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.2 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.5, delay: index * 0.15, ease: "easeOut" }}
             >
               <h3>{project.title}</h3>
               <p className="project-domain">{project.domain}</p>

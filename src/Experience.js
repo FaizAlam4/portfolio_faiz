@@ -47,10 +47,10 @@ const Experience = () => {
             <motion.div 
               key={job.id} 
               className="work-item"
-              initial={{ opacity: 0, x: -100 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.3 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.6, delay: index * 0.15, ease: "easeOut" }}
             >
               <div className="work-card">
                 <h3>{job.position}</h3>

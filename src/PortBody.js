@@ -25,8 +25,8 @@ const PortBody = () => {
                         {/* Left Side - Text Content */}
                         <motion.div 
                             className="hero-text-content"
-                            initial={{ opacity: 0, x: -60 }}
-                            animate={{ opacity: 1, x: 0 }}
+                            initial={{ opacity: 0, y: 30 }}
+                            animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, delay: 0.2 }}
                         >
                             <motion.div
@@ -89,8 +89,8 @@ const PortBody = () => {
                         {/* Right Side - Profile Image */}
                         <motion.div 
                             className="hero-image-content"
-                            initial={{ opacity: 0, x: 60, scale: 0.8 }}
-                            animate={{ opacity: 1, x: 0, scale: 1 }}
+                            initial={{ opacity: 0, y: 30, scale: 0.8 }}
+                            animate={{ opacity: 1, y: 0, scale: 1 }}
                             transition={{ duration: 0.8, delay: 0.4 }}
                         >
                             <div className="hero-image-wrapper">
